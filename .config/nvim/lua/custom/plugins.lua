@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -12,7 +12,8 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require "custom.configs.null-ls"
+          local config = require "custom.configs.null-ls"
+          require("null-ls").setup(config)
         end,
       },
     },
@@ -25,7 +26,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -50,9 +51,6 @@ local plugins = {
   -- Tabout
   {
     "abecodes/tabout.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
     init = function()
       require("tabout").setup()
     end,

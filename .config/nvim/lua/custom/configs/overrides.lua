@@ -11,6 +11,10 @@ M.treesitter = {
     "tsx",
     "markdown",
     "markdown_inline",
+    "go",
+    "gomod",
+    "gosum",
+    "gowork"
   },
   indent = {
     enable = true,
@@ -31,7 +35,10 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
 
+    -- golang
     "gopls",
+    "goimports-reviser",
+    "gofumt",
   },
 }
 
@@ -39,6 +46,7 @@ M.mason = {
 M.nvimtree = {
   git = {
     enable = true,
+    ignore = false,
   },
 
   renderer = {
