@@ -13,11 +13,16 @@ M.general = {
 		["\\"] = { cmd("call feedkeys('i')"), "enter insert mode" },
 		["|"] = { cmd("call feedkeys('v')"), "enter visual mode" },
 		["<leader>ee"] = { cmd("NvimTreeToggle"), "toggle nvim-tree view" },
+		["<F2>"] = { cmd("Rename"), "rename all references" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },
 		["<C-z>"] = { cmd("undo"), "undo" },
 		["<C-y>"] = { cmd("redo"), "redo" },
+		["<F2>"] = { cmd("Rename"), "rename all references" },
+	},
+	i = {
+		["<F2>"] = { cmd("Rename"), "rename all references" },
 	},
 }
 

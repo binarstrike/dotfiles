@@ -1,4 +1,5 @@
 local overrides = require("custom.configs.overrides")
+local createCommand = vim.api.nvim_create_user_command
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -12,8 +13,7 @@ local plugins = {
 			{
 				"jose-elias-alvarez/null-ls.nvim",
 				config = function()
-					local config = require("custom.configs.null-ls")
-					require("null-ls").setup(config)
+					require("custom.configs.null-ls")
 				end,
 			},
 		},
@@ -56,7 +56,15 @@ local plugins = {
 			require("tabout").setup()
 		end,
 	},
-
+	-- renamer.nvim
+	{
+		"filipdutescu/renamer.nvim",
+		event = "BufEnter",
+		config = function()
+			require("custom.configs.renamer-nvim")
+			createCommand("Rename", "lua require('renamer').rename()", {})
+		end,
+	},
 	--
 	-- To make a plugin not be loaded
 	-- {

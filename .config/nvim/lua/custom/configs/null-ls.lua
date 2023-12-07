@@ -1,7 +1,7 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local f = require("null-ls").builtins.formatting
 
-return {
+require("null-ls").setup({
 	debug = false,
 	sources = {
 		-- html, javascript, css, markdown
@@ -32,4 +32,4 @@ return {
 			})
 		end
 	end,
-}
+})
