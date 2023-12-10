@@ -53,4 +53,20 @@ M.nvimtree = {
 	},
 }
 
+M.telescope = function()
+	local opts = require("plugins.configs.telescope")
+
+	opts.extensions.repo = {
+		list = {
+			search_dirs = {
+				vim.env.HOME .. "/Documents/GitHub",
+				-- more directories to search
+			},
+		},
+	}
+
+	table.insert(opts.extensions_list, "repo")
+	return opts
+end
+
 return M

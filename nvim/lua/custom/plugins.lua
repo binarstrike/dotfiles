@@ -25,6 +25,24 @@ local plugins = {
 
 	-- override plugin configs
 	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			"cljoly/telescope-repo.nvim",
+		},
+		opts = overrides.telescope,
+	},
+
+	{
+		"neovim/nvim-lspconfig",
+		opts = require("custom.configs.lspconfig"),
+		config = function(_, opts)
+			for k, v in pairs(opts) do
+				require("lspconfig")[k].setup(v)
+			end
+		end,
+	},
+
+	{
 		"williamboman/mason.nvim",
 		opts = overrides.mason,
 	},
@@ -56,14 +74,26 @@ local plugins = {
 			require("tabout").setup()
 		end,
 	},
+
 	-- renamer.nvim
 	{
 		"filipdutescu/renamer.nvim",
-		event = "BufEnter",
+		event = "VeryLazy",
 		config = function()
-			require("custom.configs.renamer-nvim")
-			createCommand("Rename", "lua require('renamer').rename()", {})
+			require("custom.configs.renamer")
+			createCommand("Renamer", "lua require('renamer').rename()", {})
 		end,
+	},
+
+	-- toggleterm.nvim
+	{
+		"akinsho/toggleterm.nvim",
+		event = "VeryLazy",
+		opts = require("custom.configs.toggleterm"),
+		config = true,
+		-- config = function(_, opts)
+		-- 	require("toggleterm").setup(opts)
+		-- end,
 	},
 	--
 	-- To make a plugin not be loaded
