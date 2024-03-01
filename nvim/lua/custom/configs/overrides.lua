@@ -13,7 +13,7 @@ M.treesitter = {
 		"markdown_inline",
 		"go",
 		"gomod",
-		"gosum",
+		"prisma",
 	},
 	indent = {
 		enable = true,
@@ -33,6 +33,9 @@ M.mason = {
 		"gopls",
 		"goimports-reviser",
 		"gofumt",
+
+		-- typescript
+		"typescript-language-server",
 	},
 }
 
@@ -56,11 +59,12 @@ M.nvimtree = {
 M.telescope = function()
 	local opts = require("plugins.configs.telescope")
 
-	opts.extensions.repo = {
-		list = {
-			search_dirs = {
-				vim.env.HOME .. "/Documents/GitHub",
-				-- more directories to search
+	opts.extensions = {
+		repo = {
+			list = {
+				search_dirs = {
+					"Z:\\REPO",
+				},
 			},
 		},
 	}

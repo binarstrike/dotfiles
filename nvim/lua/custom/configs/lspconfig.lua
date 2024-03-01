@@ -33,4 +33,9 @@ lsp.gopls = {
 	},
 }
 
+lsp.tsserver = {
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
 return lsp
