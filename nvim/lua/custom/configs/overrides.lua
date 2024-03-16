@@ -32,7 +32,7 @@ M.mason = {
 		"golines",
 		"gopls",
 		"goimports-reviser",
-		"gofumt",
+		"gofumpt",
 
 		-- typescript
 		"typescript-language-server",
@@ -63,7 +63,7 @@ M.telescope = function()
 		repo = {
 			list = {
 				search_dirs = {
-					"Z:\\REPO",
+					vim.env.HOME .. "/Documents/REPO",
 				},
 			},
 		},
