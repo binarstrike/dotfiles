@@ -1,8 +1,8 @@
 local options = {
-	shell = "pwsh",
+	shell = "/bin/zsh",
 	hide_numbers = true,
 	persist_mode = true,
-	direction = "tab",
+	direction = "float",
 	auto_scroll = true,
 	start_in_insert = true,
 	open_mapping = "<C-\\>",
