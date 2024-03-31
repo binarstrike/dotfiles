@@ -95,6 +95,7 @@ local plugins = {
 		-- 	require("toggleterm").setup(opts)
 		-- end,
 	},
+	{ "wakatime/vim-wakatime", lazy = false },
 	--
 	-- To make a plugin not be loaded
 	-- {

@@ -1,0 +1,7 @@
+*.log
+config/hypr/store/*
+config/hypr/bin/*
+!config/hypr/store/.gitkeep
+!config/hypr/bin/.gitkeep
+temp
+*.bin

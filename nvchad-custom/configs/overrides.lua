@@ -13,7 +13,11 @@ M.treesitter = {
 		"markdown_inline",
 		"go",
 		"gomod",
+		"dockerfile",
 		"prisma",
+		"bash",
+		"tmux",
+		"hyprlang",
 	},
 	indent = {
 		enable = true,
@@ -34,8 +38,14 @@ M.mason = {
 		"goimports-reviser",
 		"gofumpt",
 
-		-- typescript
+		"dockerfile-language-server",
+		"docker-compose-language-service",
+		"html-lsp",
+		"css-lsp",
 		"typescript-language-server",
+		"pyright",
+		"clangd",
+		"bash-language-server",
 	},
 }
 
