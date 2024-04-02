@@ -1,0 +1,11 @@
+[Unit]
+Description=aria2 rpc daemon
+
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=file:/tmp/aria2_error.log
+ExecStart=/bin/aria2c --enable-rpc --rpc-listen-port=65535 --optimize-concurrent-downloads=true --file-allocation=falloc --continue=true --split=8 --max-concurrent-downloads=8 --max-connection-per-server=8 --dir=%h/Downloads/
+
+[Install]
+WantedBy=default.target
