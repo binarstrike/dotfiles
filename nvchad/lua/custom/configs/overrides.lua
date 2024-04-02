@@ -31,6 +31,7 @@ M.mason = {
 	ensure_installed = {
 		"lua-language-server",
 		"stylua",
+		"prettier",
 
 		-- go language server and formatter
 		"golines",

@@ -5,3 +5,7 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+local custom_filetype = require("custom.configs.custom-filetype")
+
+vim.filetype.add(custom_filetype)
