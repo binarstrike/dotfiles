@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-for c in waybar hyprpaper dunst swayidle; do
+for c in waybar hyprpaper dunst hypridle; do
   "$c" 2>&1 >/dev/null &
 done
 
