@@ -9,10 +9,14 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 6 {
+		return
+	}
+
 	homeDir, _ := os.UserHomeDir()
 	notifFile := homeDir + "/.notif.json"
 
-	// appname, summary, body, icon_path, urgency.
+	// appname summary body icon_path urgency
 
 	notifData := notifutil.WaybarStruct{
 		Class:   strings.ToLower(os.Args[5]),
