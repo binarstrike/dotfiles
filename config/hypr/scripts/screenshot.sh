@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -e
+
 for c in grim slurp; do
   if ! command -v $c >/dev/null; then
     notify-send "$c must be installed" -u critical -a "ERROR"
