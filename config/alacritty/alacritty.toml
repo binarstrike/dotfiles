@@ -17,7 +17,7 @@ args = ["-l"]
 decorations = "Full" # "Full" | "None"
 startup_mode = "Maximized" # "Windowed" | "Maximized" | "Fullscreen"
 dynamic_padding = true
-opacity = 0.9
+opacity = 0.93
 
 [font]
 normal = { family = "ComicShannsMono Nerd Font", style = "Bold" }
