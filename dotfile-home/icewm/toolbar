@@ -3,6 +3,6 @@
 # Place your variants in /etc/icewm or in $HOME/.icewm since
 # modifications to this file will be overwritten when you reinstall icewm.
 #
-prog "xterm" utilities-terminal xterm
+prog "terminal" utilities-terminal alacritty
 prog "Web browser" web-browser xdg-open about:blank
 
