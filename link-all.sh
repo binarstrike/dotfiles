@@ -16,5 +16,7 @@ fi
 
 DOTFILE_HOME_DIR=$SCRIPT_PATH/dotfile-home
 for f in $DOTFILE_HOME_DIR/*; do
-  ln -sf $f "$HOME/.$(basename $f)"
+  DOT=$HOME/.$(basename $f)
+  [ -L "$DOT" ] && rm "$DOT"
+  ln -sf "$f" "$DOT"
 done
