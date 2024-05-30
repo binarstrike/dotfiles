@@ -17,4 +17,4 @@ image_size=20
 display_generic=false
 location=center
 key_expand=Tab
-insensitive=false
+insensitive=true
