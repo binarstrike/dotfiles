@@ -5,3 +5,4 @@ config/hypr/bin/*
 !config/hypr/bin/.gitkeep
 temp
 *.bin
+*.target.wants
