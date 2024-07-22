@@ -10,7 +10,6 @@ Type=simple
 StandardOutput=journal
 StandardError=journal
 ExecStart=/usr/bin/hyprpaper
-Restart=always
 
 [Install]
 WantedBy=graphical-session.target
