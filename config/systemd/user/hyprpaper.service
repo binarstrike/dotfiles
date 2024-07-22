@@ -1,0 +1,16 @@
+[Unit]
+Description=Hyprland's wallpaper manager
+Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/hyprpaper
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
