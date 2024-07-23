@@ -1,4 +1,4 @@
-command -v neofetch >/dev/null && neofetch
+(($+commands[fastfetch])) && fastfetch
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -121,6 +121,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH=$PATH:~/.local/bin:~/go/bin
 
-source <(fzf --zsh)
-eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.config/my.omp.json)"
+# make sure if command is exists
+(($+commands[fzf])) && source <(fzf --zsh)
+(($+commands[zoxide])) && eval "$(zoxide init zsh)"
+(($+commands[oh-my-posh])) && eval "$(oh-my-posh init zsh --config ~/.config/my.omp.json)"
