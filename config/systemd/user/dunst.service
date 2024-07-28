@@ -1,0 +1,15 @@
+[Unit]
+Description=Dunst notification daemon
+Documentation=https://dunst-project.org/documentation/
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/dunst -verbosity info
+
+[Install]
+WantedBy=graphical-session.target

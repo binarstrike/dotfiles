@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for s in hypridle hyprpaper; do
+for s in hyprpaper hypridle dunst; do
     systemctl --user start "$s.service"
 done
