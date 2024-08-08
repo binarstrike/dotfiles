@@ -33,5 +33,5 @@ fi
 
 if [ $COPY_SS ]; then
   wl-copy <$OUT_FILE
-  notify-send "Screenshot copied to clipboard" -a "ss" -u low
+  notify-send "Screenshot copied to clipboard" -a "Screenshot" -u normal
 fi
