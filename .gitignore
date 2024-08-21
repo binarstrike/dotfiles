@@ -6,3 +6,4 @@ config/hypr/bin/*
 temp
 *.bin
 *.target.wants
+.tmp*

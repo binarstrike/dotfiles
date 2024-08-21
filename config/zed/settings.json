@@ -1,13 +1,6 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `zed: Open Default Settings` command
-// from the command palette
 {
   "vim_mode": true,
+  "tab_size": 2,
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "buffer_font_weight": 800,
@@ -16,7 +9,6 @@
   "scrollbar": {
     "show": "never"
   },
-  "always_treat_brackets_as_autoclosed": false,
   "confirm_quit": true,
   "features": {
     "inline_completion_provider": "none",
@@ -24,18 +16,16 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "One Dark"
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
   },
-  "lsp": {
-    "gopls": {
-      "initialization_options": {
-        "hints": {
-          "assignVariableTypes": true,
-          "constantValues": true,
-          "rangeVariableTypes": true
-        }
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "/usr/bin/zsh",
+        "args": ["-l"]
       }
-    }
+    },
+    "copy_on_select": true
   }
 }

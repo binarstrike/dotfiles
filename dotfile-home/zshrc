@@ -1,4 +1,4 @@
-(($+commands[fastfetch])) && fastfetch
+(($+commands[fastfetch])) && [ ! $ZED_TERM ] && fastfetch
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -119,7 +119,7 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PATH=$PATH:~/.local/bin:~/go/bin
+export PATH=$PATH:~/.local/bin:~/go/bin:~/.cargo/bin
 
 # make sure if command is exists
 (($+commands[fzf])) && source <(fzf --zsh)
