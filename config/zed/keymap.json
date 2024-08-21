@@ -1,0 +1,26 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "\\": "vim::InsertBefore",
+      "|": "vim::ToggleVisualLine",
+      "space e": "project_panel::ToggleFocus",
+      "space x": "pane::CloseActiveItem",
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-d": "editor::SelectNext",
+      "ctrl-]": "vim::Indent"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-enter": "editor::NewlineBelow"
+      // "ctrl-q": "zed::NoAction"
+    }
+  }
+]
