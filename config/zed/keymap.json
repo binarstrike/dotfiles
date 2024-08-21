@@ -1,19 +1,29 @@
 [
   {
-    "context": "VimControl && !menu",
+    "context": "VimControl && !Menu",
     "bindings": {
       "\\": "vim::InsertBefore",
       "|": "vim::ToggleVisualLine",
       "space e": "project_panel::ToggleFocus",
       "space x": "pane::CloseActiveItem",
-      "ctrl-w": "pane::CloseActiveItem"
+      "space c": "editor::Cut",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-q": "terminal_panel::ToggleFocus",
+      "ctrl-d": "editor::SelectNext",
+      ";": ["workspace::SendKeystrokes", ":"],
+      "space w": "workspace::ActivateNextPane"
     }
   },
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "ctrl-d": "editor::SelectNext",
-      "ctrl-]": "vim::Indent"
+      "ctrl-d": "editor::SelectNext"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-q": "terminal_panel::ToggleFocus"
     }
   },
   {
