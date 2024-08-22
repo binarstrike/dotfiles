@@ -1,7 +1,4 @@
 {
-  "tab_bar": {
-    "show": false
-  },
   "vim_mode": true,
   "tab_size": 2,
   "ui_font_size": 14,
@@ -38,7 +35,7 @@
     "file_icons": true,
     "folder_icons": true,
     "git_status": true,
-    "indent_size": 20,
+    "indent_size": 10,
     "auto_reveal_entries": true,
     "auto_fold_dirs": true,
     "scrollbar": {
@@ -52,7 +49,7 @@
     "file_icons": true,
     "folder_icons": true,
     "git_status": true,
-    "indent_size": 20,
+    "indent_size": 10,
     "auto_reveal_entries": true,
     "auto_fold_dirs": true
   }

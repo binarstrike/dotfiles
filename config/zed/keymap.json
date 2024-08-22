@@ -1,29 +1,59 @@
 [
   {
-    "context": "VimControl && !Menu",
+    "context": "VimControl && !menu",
     "bindings": {
       "\\": "vim::InsertBefore",
       "|": "vim::ToggleVisualLine",
       "space e": "project_panel::ToggleFocus",
+      "space e e": "workspace::ToggleLeftDock",
       "space x": "pane::CloseActiveItem",
-      "space c": "editor::Cut",
-      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-x": "editor::Cut",
       "ctrl-q": "terminal_panel::ToggleFocus",
       "ctrl-d": "editor::SelectNext",
       ";": ["workspace::SendKeystrokes", ":"],
-      "space w": "workspace::ActivateNextPane"
+      "ctrl-s": "pane::SplitRight",
+      "space w": "workspace::ActivateNextPane",
+      "space s": [
+        "workspace::SendKeystrokes",
+        "ctrl-s ctrl-99 space w space x space w"
+      ]
     }
   },
   {
-    "context": "vim_mode == insert",
+    "context": "Editor && !menu &&vim_mode == insert",
     "bindings": {
+      "ctrl-x": "editor::Cut",
       "ctrl-d": "editor::SelectNext"
+    }
+  },
+  {
+    "context": "Editor && !menu && vim_mode == normal",
+    "bindings": {
+      "y": "vim::Redo"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "n": "vim::PreviousSubwordEnd"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-q": "terminal_panel::ToggleFocus"
+      "ctrl-q": "workspace::ToggleBottomDock"
     }
   },
   {
