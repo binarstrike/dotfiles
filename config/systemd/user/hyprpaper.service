@@ -2,8 +2,8 @@
 Description=Hyprland's wallpaper manager
 Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper
 PartOf=graphical-session.target
-After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
+After=graphical-session.target
 
 [Service]
 Type=simple
