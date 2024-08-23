@@ -7,29 +7,36 @@
       "space e": "project_panel::ToggleFocus",
       "space e e": "workspace::ToggleLeftDock",
       "space x": "pane::CloseActiveItem",
-      "ctrl-x": "editor::Cut",
-      "ctrl-q": "terminal_panel::ToggleFocus",
-      "ctrl-d": "editor::SelectNext",
-      ";": ["workspace::SendKeystrokes", ":"],
-      "ctrl-s": "pane::SplitRight",
       "space w": "workspace::ActivateNextPane",
       "space s": [
         "workspace::SendKeystrokes",
-        "ctrl-s ctrl-99 space w space x space w"
-      ]
+        "ctrl-s l ctrl-99 space w space x space w"
+      ],
+      "ctrl-x": "editor::Cut",
+      "ctrl-q": "workspace::ToggleBottomDock",
+      "ctrl-d": "editor::SelectNext",
+      ";": ["workspace::SendKeystrokes", ":"],
+      "ctrl-s h": "pane::SplitLeft",
+      "ctrl-s j": "pane::SplitUp",
+      "ctrl-s k": "pane::SplitDown",
+      "ctrl-s l": "pane::SplitRight"
     }
   },
   {
-    "context": "Editor && !menu &&vim_mode == insert",
+    "context": "Editor && !menu && vim_mode == insert",
     "bindings": {
       "ctrl-x": "editor::Cut",
-      "ctrl-d": "editor::SelectNext"
+      "ctrl-d": "editor::SelectNext",
+      "ctrl-s": ["workspace::SendKeystrokes", "escape : w enter"]
     }
   },
   {
     "context": "Editor && !menu && vim_mode == normal",
     "bindings": {
-      "y": "vim::Redo"
+      "y": "vim::Redo",
+      "ctrl-m": "editor::MoveToEnclosingBracket",
+      "ctrl-alt-[": "editor::Fold",
+      "ctrl-alt-]": "editor::UnfoldLines"
     }
   },
   {
@@ -51,16 +58,121 @@
     }
   },
   {
+    // bindings from vscode
+    "context": "Editor",
+    "bindings": {
+      "ctrl-[": "editor::Outdent",
+      "ctrl-]": "editor::Indent",
+      "ctrl-alt-up": "editor::AddSelectionAbove",
+      "ctrl-alt-down": "editor::AddSelectionBelow",
+      "ctrl-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ],
+      "ctrl-shift-l": "editor::SelectAllMatches",
+      "ctrl-k ctrl-i": "editor::Hover",
+      "ctrl-/": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ],
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+      "ctrl-u": "editor::UndoSelection",
+      "ctrl-shift-u": "editor::RedoSelection",
+      "f8": "editor::GoToDiagnostic",
+      "shift-f8": "editor::GoToPrevDiagnostic",
+      "f2": "editor::Rename",
+      "f12": "editor::GoToDefinition",
+      "alt-f12": "editor::GoToDefinitionSplit",
+      "ctrl-f12": "editor::GoToTypeDefinition",
+      "ctrl-alt-f12": "editor::GoToTypeDefinitionSplit",
+      "alt-shift-f12": "editor::FindAllReferences",
+      "ctrl-space": "editor::ShowCompletions",
+      "ctrl-.": "editor::ToggleCodeActions",
+      "ctrl-alt-r": "pane::RevealInProjectPanel",
+      "ctrl-enter": "editor::NewlineBelow"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-o": "outline::Toggle",
+      "ctrl-g": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-1": ["pane::ActivateItem", 0],
+      "ctrl-2": ["pane::ActivateItem", 1],
+      "ctrl-3": ["pane::ActivateItem", 2],
+      "ctrl-4": ["pane::ActivateItem", 3],
+      "ctrl-5": ["pane::ActivateItem", 4],
+      "ctrl-6": ["pane::ActivateItem", 5],
+      "ctrl-7": ["pane::ActivateItem", 6],
+      "ctrl-8": ["pane::ActivateItem", 7],
+      "ctrl-9": ["pane::ActivateItem", 8],
+      "ctrl-0": "pane::ActivateLastItem",
+      // "ctrl--": "pane::GoBack",
+      // "ctrl-_": "pane::GoForward",
+      "ctrl-shift-t": "pane::ReopenClosedItem",
+      "ctrl-shift-f": "project_search::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-5": ["workspace::ActivatePane", 4],
+      "ctrl-6": ["workspace::ActivatePane", 5],
+      "ctrl-7": ["workspace::ActivatePane", 6],
+      "ctrl-8": ["workspace::ActivatePane", 7],
+      "ctrl-9": ["workspace::ActivatePane", 8],
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-r": "workspace::ToggleRightDock",
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-alt-y": "workspace::CloseAllDocks",
+      "ctrl-shift-f": "workspace::NewSearch",
+      "ctrl-k ctrl-t": "theme_selector::Toggle",
+      "ctrl-k ctrl-s": "zed::OpenKeymap",
+      "ctrl-t": "project_symbols::Toggle",
+      "ctrl-p": "file_finder::Toggle",
+      "ctrl-shift-p": "command_palette::Toggle",
+      "ctrl-shift-m": "diagnostics::Deploy",
+      "ctrl-shift-e": "project_panel::ToggleFocus",
+      "ctrl-?": "assistant::ToggleFocus",
+      "ctrl-alt-s": "workspace::SaveAll",
+      "ctrl-k m": "language_selector::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "shift-s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
+  },
+  {
     "context": "Terminal",
     "bindings": {
       "ctrl-q": "workspace::ToggleBottomDock"
     }
   },
   {
-    "context": "Editor",
+    "context": "EmptyPane && !Terminal",
     "bindings": {
-      "ctrl-enter": "editor::NewlineBelow"
-      // "ctrl-q": "zed::NoAction"
+      "ctrl-q": "workspace::NewTerminal"
     }
   }
 ]
