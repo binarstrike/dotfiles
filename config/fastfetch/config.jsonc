@@ -5,10 +5,11 @@
     // },
     "logo" : {
       "type": "auto",
-      "source": "~/.config/fastfetch/ascii.txt",
+      "source": "~/.config/fastfetch/ascii_2.txt",
       "position": "left",
       "padding": {
-        "top": 1
+        "top": 1,
+        "left": 2
       },
       "color": {
         "1": "cyan"
