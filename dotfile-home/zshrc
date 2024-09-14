@@ -108,6 +108,7 @@ alias cd='z'
 alias :q='exit'
 alias :l='clear'
 alias d='docker'
+alias code='zeditor'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
