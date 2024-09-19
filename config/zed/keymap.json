@@ -15,7 +15,7 @@
       "ctrl-x": "editor::Cut",
       "ctrl-q": "workspace::ToggleBottomDock",
       "ctrl-d": "editor::SelectNext",
-      ";": ["workspace::SendKeystrokes", ":"],
+      ";": "command_palette::Toggle",
       "ctrl-s h": "pane::SplitLeft",
       "ctrl-s j": "pane::SplitUp",
       "ctrl-s k": "pane::SplitDown",
