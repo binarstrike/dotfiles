@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "<#54EFFE>n<#FFD35E>a<#54EFFE>t<#54EFFE>s<#FFD35E>u<#54EFFE>m<#FFD35E>e<#FFF>@<#54EFFE>\ueb59<#FFF> ‿ <#FFD35E>\ueb59 <#42A5E7>#",
+          "type": "text",
+          "style": "plain",
+          "cache": {
+            "duration": "infinite",
+            "strategy": "session"
+          }
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}
