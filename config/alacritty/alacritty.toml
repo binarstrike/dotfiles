@@ -1,16 +1,9 @@
-import = [
-  # uncomment the flavour you want below:
-  # "~/.config/alacritty/themes/catppuccin-latte.toml"
-  # "~/.config/alacritty/themes/catppuccin-frappe.toml"
-  "~/.config/alacritty/themes/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
-]
 
 [env]
 TERM = "xterm-256color"
 
-[shell]
-program = "/bin/zsh"
+[terminal.shell]
+program = "/usr/bin/zsh"
 args = ["-l"]
 
 [window]
@@ -21,6 +14,7 @@ opacity = 0.80
 
 [font]
 normal = { family = "ComicShannsMono Nerd Font", style = "Bold" }
+size = 14
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
@@ -33,3 +27,14 @@ hide_when_typing = true
 bindings = [
   { mouse = "Right", mods = "Control", action = "Paste" },
 ]
+
+[general]
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/themes/catppuccin-latte.toml"
+  # "~/.config/alacritty/themes/catppuccin-frappe.toml"
+  #"~/.config/alacritty/themes/catppuccin-macchiato.toml"
+  "~/.config/alacritty/themes/catppuccin-mocha.toml"
+]
+
+[terminal]
