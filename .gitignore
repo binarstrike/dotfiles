@@ -7,3 +7,5 @@ temp
 *.bin
 *.target.wants
 .tmp*
+config/tmux/plugins/*
+!config/tmux/plugins/tpm
