@@ -1,18 +1,21 @@
-#!/bin/sh
+#!/usr/bin/bash
 
-WP_DIR=~/.config/hypr/wallpapers
-WP_COUNT=`ls -l $WP_DIR | wc -l`
+set -e
 
-ACTIVE_WP_PATH=`hyprctl hyprpaper listactive | awk '{print $3}'`
-NUM_ACTIVE_WP=${ACTIVE_WP_PATH##*/} # base file name
-NUM_ACTIVE_WP=${NUM_ACTIVE_WP%.*} # file name without extension
+CONFIG_DIR_HOME=$([ -n "$XDG_CONFIG_HOME" ] && echo -n "$XDG_CONFIG_HOME" || echo -n "$HOME/.config")
+WP_DIR="$CONFIG_DIR_HOME/hypr/wallpapers"
+WP_COUNT=$(find "$WP_DIR" -type f ! -name ".*" | wc -l)
 
-if [ ! $(($NUM_ACTIVE_WP+1)) -ge $WP_COUNT ]; then
-    NEXT_WP_NUM=$(($NUM_ACTIVE_WP+1))
+ACTIVE_WP_PATH=$(hyprctl hyprpaper listactive | awk '{print $3}')
+NUM_ACTIVE_WP=${ACTIVE_WP_PATH##*/}
+NUM_ACTIVE_WP=${NUM_ACTIVE_WP%.*}
+
+if [ ! $((NUM_ACTIVE_WP++)) -ge "$WP_COUNT" ]; then
+  NEXT_WP_NUM=$((NUM_ACTIVE_WP++))
 else
-    NEXT_WP_NUM=1
+  NEXT_WP_NUM=1
 fi
 
-hyprctl hyprpaper unload $ACTIVE_WP_PATH >/dev/null
-hyprctl hyprpaper preload "$WP_DIR/$NEXT_WP_NUM.jpg" >/dev/null
+hyprctl hyprpaper unload "$ACTIVE_WP_PATH"
+hyprctl hyprpaper preload "$WP_DIR/$NEXT_WP_NUM.jpg"
 hyprctl hyprpaper wallpaper eDP-1,"$WP_DIR/$NEXT_WP_NUM.jpg"
