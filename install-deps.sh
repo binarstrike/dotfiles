@@ -15,6 +15,10 @@ PKGS_PACMAN=(
   alacritty tmux fastfetch htop neovim
   # fonts
   noto-fonts noto-fonts-cjk noto-fonts-emoji
+  # graphic drivers and utilities
+  intel-gmmlib intel-media-driver libva-intel-driver mesa mesa-utils vulkan-headers vulkan-icd-loader vulkan-intel vulkan-tools
+  # microcode and firmware
+  intel-ucode linux-firmware
   # file manager
   nautilus
   # other apps
