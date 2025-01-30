@@ -4,7 +4,7 @@ set -e
 
 PKGS_PACMAN=(
   # display manager, hyprland
-  ly hyprland aquamarine hyprpaper hyprlock hypridle hyprpolkitagent hyprland-protocols hyprutils
+  ly hyprland aquamarine hyprpaper hyprlock hypridle hyprpolkitagent hyprland-protocols hyprutils hyprcursor hyprgraphics hyprsunset hyprlang hyprland-qtutils
   # xdg desktop portal (file chooser, screen sharing)
   xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
   # brightness control, audio server and control
@@ -19,6 +19,8 @@ PKGS_PACMAN=(
   intel-gmmlib intel-media-driver libva-intel-driver mesa mesa-utils vulkan-headers vulkan-icd-loader vulkan-intel vulkan-tools
   # microcode and firmware
   intel-ucode linux-firmware
+  # network tools
+  networkmanager iwd dhclient
   # file manager
   nautilus
   # other apps
@@ -27,11 +29,13 @@ PKGS_PACMAN=(
   nodejs npm go base-devel cmake
   # utility packages
   grim slurp wl-clipboard fzf zoxide ripgrep wget curl jq wev dnsutils
+  # kernel
+  linux-zen
   # other packages
-  gvfs-smb git
+  gvfs-smb xfsprogs git
 )
 
-PKGS_AUR=(uwsm clipman spotify google-chrome)
+PKGS_AUR=(uwsm clipman jid-bin fd spotify google-chrome)
 
 disable_debug_flag() {
   echo "Disabling debug flag"
