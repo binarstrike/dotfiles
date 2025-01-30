@@ -28,14 +28,14 @@ PKGS_PACMAN=(
   # compiler, build tools
   nodejs npm go base-devel cmake
   # utility packages
-  grim slurp wl-clipboard fzf zoxide ripgrep wget curl jq wev dnsutils
+  grim slurp wl-clipboard fzf fd zoxide ripgrep wget curl jq wev dnsutils
   # kernel
   linux-zen
   # other packages
   gvfs-smb xfsprogs git
 )
 
-PKGS_AUR=(uwsm clipman jid-bin fd spotify google-chrome)
+PKGS_AUR=(uwsm clipman jid-bin spotify google-chrome)
 
 disable_debug_flag() {
   echo "Disabling debug flag"
