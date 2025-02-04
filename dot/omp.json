@@ -6,7 +6,7 @@
       "alignment": "left",
       "segments": [
         {
-          "template": "<#54EFFE>c<#FFD35E>h<#54EFFE>i<#54EFFE>n<#FFD35E>o<#FFF>@<#54EFFE>\ueb59<#FFF> ‿ <#FFD35E><f>\ueb59</f> {{if .Root}}<#F93827>#{{else}}<#42A5E7>${{end}}",
+          "template": "<#54EFFE>m<#FFD35E>i<#54EFFE>d<#FFD35E>o<#54EFFE>r<#FFD35E>i<#54EFFE><#FFF>@<#54EFFE>\ueb59<#FFF> ‿ <#FFD35E><f>\ueb59</f> {{if .Root}}<#F93827>#{{else}}<#42A5E7>${{end}}",
           "type": "text",
           "style": "plain",
           "cache": {

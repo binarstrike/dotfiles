@@ -7,8 +7,10 @@ PKGS_PACMAN=(
   ly hyprland aquamarine hyprpaper hyprlock hypridle hyprpolkitagent hyprland-protocols hyprutils hyprcursor hyprgraphics hyprsunset hyprlang hyprland-qtutils
   # xdg desktop portal (file chooser, screen sharing)
   xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+  # session manager
+  uwsm
   # brightness control, audio server and control
-  brightnessctl pipewire pipewire-pulse pipewire-alsa wireplumber pavucontrol playerctl
+  brightnessctl pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol playerctl
   # start menu, notification daemon
   rofi mako
   # terminal stuff
@@ -23,12 +25,14 @@ PKGS_PACMAN=(
   networkmanager iwd dhclient
   # file manager
   nautilus
+  # shell
+  zsh
   # other apps
   discord
   # compiler, build tools
   nodejs npm go base-devel cmake
   # utility packages
-  grim slurp wl-clipboard fzf fd zoxide ripgrep wget curl jq wev dnsutils
+  grim slurp wl-clipboard fzf fd zoxide exa zip 7zip unzip ripgrep wget curl jq wev dnsutils
   # media player, media converter
   mpv ffmpeg imagemagick
   # kernel
@@ -38,8 +42,6 @@ PKGS_PACMAN=(
 )
 
 PKGS_AUR=(
-  # session manager
-  uwsm
   # clipboard manager
   clipman
   # utilitiy tools
@@ -50,6 +52,8 @@ PKGS_AUR=(
   google-chrome
   # other packages
   wayneko-git
+  # prompt customization
+  oh-my-posh-bin
 )
 
 disable_debug_flag() {
