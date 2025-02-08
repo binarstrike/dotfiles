@@ -38,7 +38,7 @@ PKGS_PACMAN=(
   # kernel
   linux-zen
   # other packages
-  gvfs-smb xfsprogs git
+  gvfs-mtp mtpfs gvfs-smb xfsprogs git
 )
 
 PKGS_AUR=(
