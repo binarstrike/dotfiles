@@ -39,6 +39,8 @@ PKGS_PACMAN=(
   mpv ffmpeg imagemagick
   # kernel
   linux-zen
+  # bluetooth
+  bluetui bluez
   # other packages
   gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git
 )
