@@ -11,6 +11,8 @@ PKGS_PACMAN=(
   uwsm
   # brightness control, audio server and control
   brightnessctl pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol playerctl
+  # audio filter and effect
+  easyeffects ardour calf lsp-plugins-lv2 zam-plugins-lv2 mda.lv2 yelp
   # start menu, notification daemon
   rofi mako
   # terminal stuff
@@ -38,7 +40,7 @@ PKGS_PACMAN=(
   # kernel
   linux-zen
   # other packages
-  gvfs-mtp mtpfs gvfs-smb xfsprogs git
+  gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git
 )
 
 PKGS_AUR=(
