@@ -50,12 +50,10 @@ link_dot() {
 }
 
 link_all() {
-  # config
   for c in $PREFIX_CONFIG_DIR/config/*; do
     link_config "${c##*/}"
   done
 
-  # dot file
   for c in $PREFIX_CONFIG_DIR/dot/*; do
     link_dot "${c##*/}"
   done

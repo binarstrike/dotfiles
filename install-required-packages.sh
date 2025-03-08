@@ -41,6 +41,8 @@ PKGS_PACMAN=(
   linux-zen
   # bluetooth
   bluetui bluez
+  # password manager
+  gnome-keyring
   # other packages
   gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git
 )

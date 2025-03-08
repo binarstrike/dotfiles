@@ -5,6 +5,8 @@ USER_SERVICES=(
   hyprpaper hypridle hyprpolkitagent
   # audio services
   pipewire pipewire-pulse wireplumber
+  # password manager
+  gnome-keyring-daemon
 )
 
 SYSTEM_SERVICES=(
