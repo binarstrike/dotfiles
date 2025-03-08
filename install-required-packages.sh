@@ -64,7 +64,7 @@ PKGS_AUR=(
 
 disable_debug_flag() {
   echo "Disabling debug flag"
-  sudo sed -i 's/purge debug/purge !debug/g' /etc/makepkg.conf || true
+  sudo sed -i 's/purge debug/purge !debug/g' /etc/makepkg.conf
 }
 
 if ! command -v yay >/dev/null 2>&1; then
