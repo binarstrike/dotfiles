@@ -44,7 +44,7 @@ PACMAN_PKGS=(
   # password manager
   gnome-keyring
   # other packages
-  gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git scx-scheds cpupower
+  gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git scx-scheds tlp tlpui
 )
 
 AUR_PKGS=(clipman jid-bin spotify google-chrome wayneko-git oh-my-posh-bin)
