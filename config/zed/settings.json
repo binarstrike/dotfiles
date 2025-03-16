@@ -6,7 +6,7 @@
     },
     "version": "2"
   },
-  "vim_mode": false,
+  "vim_mode": true,
   "tab_size": 2,
   "ui_font_size": 18,
   "buffer_font_size": 16,
@@ -18,7 +18,7 @@
   },
   "confirm_quit": true,
   "features": {
-    "edit_prediction_provider": "zed",
+    "edit_prediction_provider": "copilot",
     "copilot": true
   },
   "theme": {
@@ -30,9 +30,7 @@
     "shell": {
       "with_arguments": {
         "program": "/usr/bin/zsh",
-        "args": [
-          "-l"
-        ]
+        "args": ["-l"]
       }
     },
     "copy_on_select": true

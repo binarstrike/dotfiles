@@ -2,7 +2,7 @@
 
 set -e
 
-PKGS_PACMAN=(
+PACMAN_PKGS=(
   # display manager, hyprland
   ly hyprland aquamarine hyprpaper hyprlock hypridle hyprpolkitagent hyprland-protocols hyprutils hyprcursor hyprgraphics hyprsunset hyprlang hyprland-qtutils
   # xdg desktop portal (file chooser, screen sharing)
@@ -44,27 +44,14 @@ PKGS_PACMAN=(
   # password manager
   gnome-keyring
   # other packages
-  gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git
+  gvfs-mtp mtpfs sshfs gvfs-smb xfsprogs git scx-scheds cpupower
 )
 
-PKGS_AUR=(
-  # clipboard manager
-  clipman
-  # utilitiy tools
-  jid-bin
-  # music player
-  spotify
-  # web browser
-  google-chrome
-  # other packages
-  wayneko-git
-  # prompt customization
-  oh-my-posh-bin
-)
+AUR_PKGS=(clipman jid-bin spotify google-chrome wayneko-git oh-my-posh-bin)
 
 disable_debug_flag() {
   echo "Disabling debug flag"
-  sudo sed -i 's/purge debug/purge !debug/g' /etc/makepkg.conf
+  sudo sed -i 's/purge debug/purge !debug/g' /etc/makepkg.conf || true
 }
 
 if ! command -v yay >/dev/null 2>&1; then
@@ -79,8 +66,8 @@ if ! command -v yay >/dev/null 2>&1; then
 fi
 
 echo "Installing required packages"
-sudo pacman -S --noconfirm "${PKGS_PACMAN[@]}"
+sudo pacman -S --noconfirm "${PACMAN_PKGS[@]}"
 
 echo "Installing required packages (aur)"
 disable_debug_flag
-yes | yay -S --noconfirm "${PKGS_AUR[@]}"
+yes | yay -S --noconfirm "${AUR_PKGS[@]}"

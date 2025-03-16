@@ -7,10 +7,9 @@ program = "/usr/bin/zsh"
 args = ["-l"]
 
 [window]
-decorations = "Full" # "Full" | "None"
+decorations = "Full"       # "Full" | "None"
 startup_mode = "Maximized" # "Windowed" | "Maximized" | "Fullscreen"
 dynamic_padding = true
-opacity = 0.80
 
 [font]
 normal = { family = "ComicShannsMono Nerd Font", style = "Bold" }
@@ -24,9 +23,7 @@ blink_timeout = 0
 
 [mouse]
 hide_when_typing = true
-bindings = [
-  { mouse = "Right", mods = "Control", action = "Paste" },
-]
+bindings = [{ mouse = "Right", mods = "Control", action = "Paste" }]
 
 [general]
 import = [
@@ -34,7 +31,7 @@ import = [
   # "~/.config/alacritty/themes/catppuccin-latte.toml"
   # "~/.config/alacritty/themes/catppuccin-frappe.toml"
   #"~/.config/alacritty/themes/catppuccin-macchiato.toml"
-  "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  "~/.config/alacritty/themes/catppuccin-mocha.toml",
 ]
 
 [terminal]

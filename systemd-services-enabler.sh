@@ -9,14 +9,7 @@ USER_SERVICES=(
   gnome-keyring-daemon
 )
 
-SYSTEM_SERVICES=(
-  # display manager
-  ly
-  # bluetooth
-  bluetooth
-  # network manager
-  NetworkManager
-)
+SYSTEM_SERVICES=(ly bluetooth NetworkManager cpupower scx_loader)
 
 for s in "${USER_SERVICES[@]}"; do
   printf "start and enable \033[0;33m%s\033[0m service (user)\n" "$s"
