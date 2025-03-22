@@ -24,11 +24,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export GOPATH=$XDG_DATA_HOME/go
-export PATH=$PATH:~/.local/bin:$GOPATH/bin:$HOME/.cargo/bin
+DATA_DIR=$([ -d "$XDG_DATA_HOME" ] && echo -n "$XDG_DATA_HOME" || echo -n "$HOME/.local/share")
+
+export GOPATH=$DATA_DIR/go
+export PATH=$PATH:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin
 
 # make sure if command is exists
 (($+commands[fzf])) && source <(fzf --zsh)
 (($+commands[zoxide])) && eval "$(zoxide init zsh)"
 (($+commands[oh-my-posh])) && eval "$(oh-my-posh init zsh --config $HOME/.omp.json)"
-
